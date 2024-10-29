@@ -1,9 +1,6 @@
 package com.code.hackathon.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class CropDisease {
@@ -14,6 +11,10 @@ public class CropDisease {
     private String name;
     private String description;
     private String symptoms;
+
+    @ManyToOne
+    @JoinColumn(name = "crop_id") // Foreign key to refer to Crop
+    private Crop crop;
 
     // Getters and setters
     public Long getId() { return id; }
@@ -27,4 +28,6 @@ public class CropDisease {
 
     public String getSymptoms() { return symptoms; }
     public void setSymptoms(String symptoms) { this.symptoms = symptoms; }
+
+    public void setCrop(Crop rice) { this.crop = rice;}
 }

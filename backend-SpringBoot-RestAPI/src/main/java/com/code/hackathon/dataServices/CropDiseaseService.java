@@ -1,5 +1,6 @@
-package com.code.hackathon;
+package com.code.hackathon.dataServices;
 
+import com.code.hackathon.dataInterfaceSQL.CropDiseaseRepository;
 import com.code.hackathon.entities.CropDisease;
 import org.springframework.stereotype.Service;
 

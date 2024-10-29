@@ -1,7 +1,7 @@
-package com.code.hackathon;
+package com.code.hackathon.routers;
 
 import com.code.hackathon.entities.CropDisease;
-import com.code.hackathon.CropDiseaseService;
+import com.code.hackathon.dataServices.CropDiseaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
