@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 2rem;
+  padding: 0 5rem;
+  margin: auto;
+  width: 100%;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.navLink {
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+.navLink:hover {
+  color: var(--primary-color);
+}
