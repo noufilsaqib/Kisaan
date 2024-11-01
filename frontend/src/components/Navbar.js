@@ -14,14 +14,20 @@ export default function Navbar() {
         <span>Kisaan</span>
       </Link>
       {isLoggedIn ? (
-        <Link
-          className={styles.navLink}
-          onClick={async () => dispatch(clearSession())}
-        >
-          Logout
-        </Link>
+        <>
+          <NavLink className={styles.navLink} to="/dashboard">
+            Dashboard
+          </NavLink>
+          <Link
+            className={styles.navLink}
+            onClick={async () => dispatch(clearSession())}
+          >
+            Logout
+          </Link>
+        </>
       ) : (
-        <NavLink className={styles.navLink} to="/login">
+        // @TODO: Create login auth
+        <NavLink className={styles.navLink} to="/dashboard">
           Login
         </NavLink>
       )}

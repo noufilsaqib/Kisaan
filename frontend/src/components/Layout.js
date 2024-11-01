@@ -1,6 +1,4 @@
 import { Helmet } from "react-helmet";
-import Navbar from "./Navbar";
-// import Footer from "./Footer";
 
 export default function Layout({ title, isLandingPage = false, children }) {
   if (title && typeof document !== "undefined") {
@@ -15,8 +13,7 @@ export default function Layout({ title, isLandingPage = false, children }) {
           {isLandingPage ? "Kisaan" : `${title} | Kisaan`}
         </title>
       </Helmet>
-      <Navbar />
-      <div id="wrapper">{children}</div>
+      {children}
     </>
   );
 }
